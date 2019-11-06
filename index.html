@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WebDev</title>
+  <base href="/">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <app-root></app-root>
+  <body style='font-family: Times New Roman, verdana, sans-serif;'>
+      <div style='width:10%;
+                  padding: 20px; 
+                  border: 5px solid #316ED6; 
+                  background-color: #320ED6; 
+                  color: #31D8EB; 
+                  margin: auto; 
+                  text-align: center;'>
+      <script type="text/javascript">
+        function checkPalindrome() {
+          var revStr = "";
+          var str = document.getElementById("str").value;
+          var i = str.length;
+          for (var j = i; j >= 0; j--) {
+            revStr = revStr + str.charAt(j);
+          }
+          if (str == revStr) {
+            alert(str + " -is Palindrome");
+          } else {
+            alert(str + " -is not a Palindrome");
+          }
+        }
+      </script>
+      <form>
+        Enter a String/Number: <input type="text" id="str" name="string" /><br />
+        <input type="submit" value="Check" onclick="checkPalindrome();" />
+      </form>
+</body>
+</html>
